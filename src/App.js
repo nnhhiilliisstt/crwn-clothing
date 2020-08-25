@@ -38,7 +38,9 @@ class App extends React.Component {
           });
         });
       }
-      this.setState({ currentUser: userAuth });
+      this.setState({
+        currentUser: userAuth,
+      });
     });
   }
 
@@ -49,12 +51,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header currentUser={this.state.currentUser} />{" "}
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route path="/signin" component={SignInAndSignUpPage} />
-        </Switch>
+          <Route exact path="/" component={HomePage} />{" "}
+          <Route path="/shop" component={ShopPage} />{" "}
+          <Route path="/signin" component={SignInAndSignUpPage} />{" "}
+        </Switch>{" "}
       </div>
     );
   }
